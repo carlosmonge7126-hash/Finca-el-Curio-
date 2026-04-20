@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finca El Curio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f7f3eb;
+      color: #2f2a24;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1f6b43;
+    }
+
+    nav button {
+      padding: 10px 18px;
+      border: 1px solid #1f6b43;
+      background: white;
+      color: #1f6b43;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero img {
+      width: 280px;
+      max-width: 90%;
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      color: #1f6b43;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    .btn-primary {
+      background: #1f6b43;
+      color: white;
+    }
+
+    .btn-outline {
+      background: white;
+      border: 1px solid #1f6b43;
+      color: #1f6b43;
+    }
+
+    .section {
+      padding: 70px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .reservation {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: #1f6b43;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .info-box {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Finca El Curio</div>
+  <nav>
+    <button>ES</button>
+    <button>EN</button>
+    <button>Administrador</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="Finca el curio.png" alt="Logo Oficial Finca El Curio">
+  <h1>Finca El Curio</h1>
+  <h2>CAFÉ • TRADICIÓN • MÚSICA</h2>
+  <p>
+    Vive una experiencia única en el corazón de Costa Rica. Disfruta del Tour de Café,
+    Tour de Caña, música de marimba y menú aperitivo en un ambiente auténtico,
+    natural y lleno de tradición.
+  </p>
+
+  <button class="btn btn-primary">Reservar Ahora</button>
+  <button class="btn btn-outline">Ver Galería</button>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Experiencias Inolvidables</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Tour Siembra de Café</h3>
+      <p>Conoce el proceso del café desde la siembra hasta la taza.</p>
+    </div>
+
+    <div class="card">
+      <h3>Tour de Caña</h3>
+      <p>Descubre la tradición y cultura de la caña costarricense.</p>
+    </div>
+
+    <div class="card">
+      <h3>Música + Menú Aperitivo</h3>
+      <p>Disfruta marimba en vivo con café y aperitivos especiales.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reservation">
+  <form>
+    <h2>Reserva tu experiencia</h2>
+
+    <input type="text" placeholder="Nombre completo">
+    <input type="tel" placeholder="Teléfono">
+    <input type="email" placeholder="Correo electrónico">
+    <input type="date">
+    <input type="time">
+    <input type="number" placeholder="Cantidad de personas">
+
+    <select>
+      <option>Tour Café</option>
+      <option>Tour Caña</option>
+      <option>Música Marimba</option>
+    </select>
+
+    <textarea rows="4" placeholder="Observaciones"></textarea>
+
+    <button class="btn btn-primary" type="submit">Confirmar Reserva</button>
+  </form>
+
+  <div>
+    <div class="info-box">
+      <h3>Información de contacto</h3>
+      <p>📞 WhatsApp: +506 7126-8095</p>
+      <p>📧 Correo: Carlos8995@live.com</p>
+      <p>📍 San Antonio, Escazú, El Curio</p>
+      <p>🕘 Lun-Vie 8AM–4PM | Sáb-Dom 7AM–4PM</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Museo del Cliente</h3>
+      <p>📸 Galería privada</p>
+      <p>📷 Fotos del tour</p>
+      <p>👥 Nuestros visitantes</p>
+      <p>📅 Historial de visitas</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>Finca El Curio</h2>
+  <p>Café • Tradición • Música</p>
+  <p>© 2026 Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
